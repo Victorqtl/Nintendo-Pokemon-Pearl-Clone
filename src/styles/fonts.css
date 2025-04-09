@@ -1,0 +1,27 @@
+@font-face {
+	font-family: 'MuseoSans';
+	src: url('/fonts/MuseoSans-300.otf') format('otf');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'MuseoSans';
+	src: url('/fonts/MuseoSans-700.otf') format('otf');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+body {
+	font-family: 'MuseoSans', sans-serif;
+	font-weight: 300;
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'MuseoSans', sans-serif;
+	font-weight: 700;
+}

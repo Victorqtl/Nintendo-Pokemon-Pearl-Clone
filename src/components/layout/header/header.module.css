@@ -1,0 +1,154 @@
+.container {
+	height: 46px;
+	background-color: rgb(230, 0, 18);
+}
+
+.header {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-inline: 16px;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.logo {
+	width: 89px;
+	object-fit: cover;
+	cursor: pointer;
+}
+
+.header_left_buttons {
+	display: none;
+}
+
+.header_right_content {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.store_logo {
+	width: 136px;
+}
+
+.right_button {
+	display: none;
+}
+
+.flag {
+	width: 26px;
+	height: 18px;
+	object-fit: cover;
+	border: 1px solid white;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+	.container {
+		height: 53px;
+		background-color: #fff;
+	}
+
+	.header {
+		padding: 0px;
+		border-bottom: 1px solid rgb(218, 218, 218);
+	}
+
+	.header_left_content {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		height: 100%;
+	}
+
+	.left_buttons_container {
+		display: flex;
+		align-items: center;
+	}
+
+	.left_button {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		padding: 16px 14px;
+		background: none;
+		border: none;
+		cursor: pointer;
+	}
+
+	.left_button:hover span {
+		color: rgb(230, 0, 18);
+		transition: color 0.1s ease-in-out;
+	}
+
+	.logo_container {
+		width: 105px;
+		height: 100%;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		background-color: rgb(230, 0, 18);
+	}
+
+	.logo {
+		width: 69px;
+	}
+
+	.header_right_content {
+		padding-inline: 20px;
+		gap: 1rem;
+	}
+
+	.right_button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		padding: 8px 12px;
+		border: none;
+		border-radius: 20px;
+		background-color: #f8f8f8;
+		cursor: pointer;
+	}
+
+	.right_icon {
+		color: #484848;
+		fill: #484848;
+	}
+
+	.right_search_icon:hover {
+		color: rgb(230, 0, 18);
+	}
+
+	.right_button:hover .right_icon {
+		color: rgb(230, 0, 18);
+		fill: rgb(230, 0, 18);
+		transition: color 0.2s ease-in-out, fill 0.2s ease-in-out;
+	}
+
+	.right_button:hover .right_search_icon,
+	.right_button:hover span {
+		color: rgb(230, 0, 18);
+		transition: color 0.1s ease-in-out;
+	}
+
+	.connect_button {
+		border: 1px solid rgb(230, 0, 18);
+		border-radius: 20px;
+		padding: 4px 14px;
+		background-color: white;
+		cursor: pointer;
+	}
+
+	.connect_button span {
+		color: rgb(230, 0, 18);
+	}
+
+	.store_logo {
+		display: none;
+	}
+}
