@@ -1,0 +1,22 @@
+.list_container {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 16px 0 16px 16px;
+}
+
+.list_content {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: var(--theme-font-size-bodyS);
+}
+
+.list_content a {
+	color: var(--theme-color-darkGray3);
+	font-weight: 700;
+}
+
+.list_content span {
+	font-weight: var(--theme-font-weight-bold);
+}

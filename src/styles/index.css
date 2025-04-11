@@ -1,5 +1,40 @@
 @import './fonts.css';
 
+:root {
+	/* Color */
+	--theme-color-primary: #e60012;
+	--theme-color-primaryHover: #ac000d;
+	--theme-color-primaryLight: #fde6e7;
+	--theme-color-secondary: #3946a0;
+	--theme-color-secondaryHover: #2a3477;
+	--theme-color-secondaryLight: #bdc3e8;
+	--theme-color-black: #000000;
+	--theme-color-white: #ffffff;
+	--theme-color-darkGray1: #242424;
+	--theme-color-darkGray2: #484848;
+	--theme-color-darkGray3: #727272;
+	--theme-color-darkGray4: #969696;
+	--theme-color-lightGray1: #c8c8c8;
+	--theme-color-lightGray2: #dadada;
+	--theme-color-lightGray3: #efefef;
+	--theme-colors-ui-bgAccent: #f8f8f8;
+
+	/* Font */
+	--theme-font-weight-bold: 700;
+	--theme-font-weight-light: 300;
+	--theme-font-size-h1LDesktop: 2.375rem;
+	--theme-font-size-h1SDesktop: 1.75rem;
+	--theme-font-size-h2Desktop: 1.3125rem;
+	--theme-font-size-h3Desktop: 1.125rem;
+	--theme-font-size-bodyDesktop: 1rem;
+	--theme-font-size-h1LMobile: 1.75rem;
+	--theme-font-size-h1SMobile: 1.3125rem;
+	--theme-font-size-h2Mobile: 1.125rem;
+	--theme-font-size-h3Mobile: 1rem;
+	--theme-font-size-bodyMobile: 0.875rem;
+	--theme-font-size-bodyS: 0.75rem;
+}
+
 *,
 *::before,
 *::after {
@@ -12,8 +47,7 @@ html,
 body {
 	height: 100%;
 	width: 100%;
-	font-size: 16px;
-	line-height: 1.5;
+	line-height: 1.4;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -21,6 +55,8 @@ body {
 body {
 	min-height: 100vh;
 	text-rendering: optimizeSpeed;
+	font-size: var(--theme-font-size-bodyMobile);
+	font-weight: var(--theme-font-weight-light);
 }
 
 img,
@@ -47,6 +83,53 @@ h3,
 h4,
 h5,
 h6 {
-	color: #484848;
+	color: var(--theme-color-darkGray2);
 	overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: var(--theme-font-weight-bold);
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+}
+
+h1 {
+	font-size: var(--theme-font-size-h1SMobile);
+}
+
+h2 {
+	font-size: var(--theme-font-size-h2Mobile);
+}
+
+h3 {
+	font-size: var(--theme-font-size-h3Mobile);
+}
+
+@media (min-width: 430px) {
+	body {
+		font-size: var(--theme-font-size-bodyDesktop);
+	}
+	h1 {
+		font-size: var(--theme-font-size-h1SDesktop);
+	}
+
+	h2 {
+		font-size: var(--theme-font-size-h2Desktop);
+	}
+
+	h3 {
+		font-size: var(--theme-font-size-h3Desktop);
+	}
 }

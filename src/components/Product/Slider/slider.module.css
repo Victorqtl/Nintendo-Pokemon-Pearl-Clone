@@ -1,0 +1,39 @@
+.slider_container {
+	display: flex;
+	overflow: hidden;
+	position: relative;
+}
+
+.chevron_left_container {
+	position: absolute;
+	left: 0;
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+.chevron_right_container {
+	position: absolute;
+	right: 0;
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+.chevron_button {
+	cursor: pointer;
+}
+
+.chevron_left,
+.chevron_right {
+	width: 64px;
+	height: 64px;
+	color: transparent;
+}
+
+@media (min-width: 768px) {
+	.chevron_button:hover .chevron_left,
+	.chevron_button:hover .chevron_right {
+		color: var(--theme-color-white);
+	}
+}

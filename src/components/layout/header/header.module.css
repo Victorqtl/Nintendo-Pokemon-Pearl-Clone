@@ -1,6 +1,6 @@
 .container {
 	height: 46px;
-	background-color: rgb(230, 0, 18);
+	background-color: var(--theme-color-primary);
 }
 
 .header {
@@ -10,8 +10,7 @@
 	justify-content: space-between;
 	align-items: center;
 	padding-inline: 16px;
-	font-size: 14px;
-	font-weight: 700;
+	font-weight: var(--theme-font-weight-bold);
 }
 
 .logo {
@@ -20,24 +19,26 @@
 	cursor: pointer;
 }
 
-.header_left_buttons {
-	display: none;
-}
-
 .header_right_content {
 	display: flex;
 	align-items: center;
-	gap: 20px;
+	gap: 10px;
 }
 
 .store_logo {
 	width: 136px;
 }
 
-.right_button {
+.left_buttons_container,
+.right_button,
+.connect_button {
 	display: none;
 }
 
+.region_selector {
+	background: none;
+	border: none;
+}
 .flag {
 	width: 26px;
 	height: 18px;
@@ -45,17 +46,18 @@
 	border: 1px solid white;
 	border-radius: 4px;
 	cursor: pointer;
+	background-color: var(--theme-color-white);
 }
 
 @media (min-width: 1024px) {
 	.container {
 		height: 53px;
-		background-color: #fff;
+		background-color: var(--theme-color-white);
 	}
 
 	.header {
 		padding: 0px;
-		border-bottom: 1px solid rgb(218, 218, 218);
+		border-bottom: 1px solid var(--theme-color-lightGray2);
 	}
 
 	.header_left_content {
@@ -78,10 +80,11 @@
 		background: none;
 		border: none;
 		cursor: pointer;
+		font-size: var(--theme-font-size-bodyMobile);
 	}
 
 	.left_button:hover span {
-		color: rgb(230, 0, 18);
+		color: var(--theme-color-primary);
 		transition: color 0.1s ease-in-out;
 	}
 
@@ -91,7 +94,7 @@
 		display: inline-flex;
 		justify-content: center;
 		align-items: center;
-		background-color: rgb(230, 0, 18);
+		background-color: var(--theme-color-primary);
 	}
 
 	.logo {
@@ -111,33 +114,34 @@
 		padding: 8px 12px;
 		border: none;
 		border-radius: 20px;
-		background-color: #f8f8f8;
+		background-color: var(--theme-colors-ui-bgAccent);
 		cursor: pointer;
+		font-size: var(--theme-font-size-bodyMobile);
 	}
 
 	.right_icon {
-		color: #484848;
-		fill: #484848;
+		color: var(--theme-color-darkGray2);
+		fill: var(--theme-color-darkGray2);
 	}
 
 	.right_search_icon:hover {
-		color: rgb(230, 0, 18);
+		color: var(--theme-color-primary);
 	}
 
 	.right_button:hover .right_icon {
-		color: rgb(230, 0, 18);
-		fill: rgb(230, 0, 18);
+		color: var(--theme-color-primary);
+		fill: var(--theme-color-primary);
 		transition: color 0.2s ease-in-out, fill 0.2s ease-in-out;
 	}
 
 	.right_button:hover .right_search_icon,
 	.right_button:hover span {
-		color: rgb(230, 0, 18);
+		color: var(--theme-color-primary);
 		transition: color 0.1s ease-in-out;
 	}
 
 	.connect_button {
-		border: 1px solid rgb(230, 0, 18);
+		border: 1px solid var(--theme-color-primary);
 		border-radius: 20px;
 		padding: 4px 14px;
 		background-color: white;
@@ -145,7 +149,7 @@
 	}
 
 	.connect_button span {
-		color: rgb(230, 0, 18);
+		color: var(--theme-color-primary);
 	}
 
 	.store_logo {
