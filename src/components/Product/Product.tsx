@@ -1,6 +1,5 @@
 import styles from './Product.module.css';
 import Slider from './Slider/Slider';
-import Rail from './Rail/Rail';
 import { ChevronRight } from 'lucide-react';
 
 export default function Product() {
@@ -32,7 +31,6 @@ export default function Product() {
 				</nav>
 			</div>
 			<Slider />
-			<Rail />
 		</section>
 	);
 }

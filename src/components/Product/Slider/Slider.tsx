@@ -1,4 +1,7 @@
 import styles from './slider.module.css';
+import Rail from '../Rail/Rail';
+import { useState } from 'react';
+
 import { ChevronLeft } from 'lucide-react';
 import { ChevronRight } from 'lucide-react';
 import pokemonPearlFirstTrailer from '@/assets/videos/pokemon-pearl-first-trailer.mp4';
@@ -30,34 +33,63 @@ const sliderAssets: SlideItem[] = [
 	{ type: 'image', src: pokemonPearlMagma, alt: 'Pokemon Shining Pearl, magma decor' },
 	{ type: 'image', src: pokemonPearlLove, alt: 'Pokemon Shining Pearl, Pikachu and Hoothoot send love' },
 ];
+
 export default function Slider() {
+	const [currentIndex, setCurrentIndex] = useState(0);
+
+	const nextSlide = () => {
+		setCurrentIndex(prevIndex => (prevIndex === sliderAssets.length - 1 ? 0 : prevIndex + 1));
+	};
+
+	const prevSlide = () => {
+		setCurrentIndex(prevIndex => (prevIndex === 0 ? sliderAssets.length - 1 : prevIndex - 1));
+	};
+	console.log(currentIndex);
 	return (
 		<div className={styles.container}>
 			<div className={styles.slider_container}>
+				<div
+					className={styles.medias_container}
+					style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+					{sliderAssets.map((asset, index) => (
+						<div
+							key={index}
+							className={styles.media_content}>
+							{asset.type === 'video' ? (
+								<video
+									src={asset.src}
+									controls
+									autoPlay></video>
+							) : (
+								<img
+									src={asset.src}
+									alt={asset.alt}
+								/>
+							)}
+						</div>
+					))}
+				</div>
 				<div className={styles.chevron_left_container}>
-					<button className={styles.chevron_button}>
+					<button
+						onClick={() => prevSlide()}
+						aria-label='Previous'
+						className={styles.chevron_button}>
 						<ChevronLeft className={styles.chevron_left} />
 					</button>
 				</div>
 				<div className={styles.chevron_right_container}>
-					<button className={styles.chevron_button}>
+					<button
+						onClick={() => nextSlide()}
+						aria-label='Next'
+						className={styles.chevron_button}>
 						<ChevronRight className={styles.chevron_right} />
 					</button>
 				</div>
-				{sliderAssets.map((asset, index) =>
-					asset.type === 'video' ? (
-						<video
-							src={asset.src}
-							key={index}></video>
-					) : (
-						<img
-							src={asset.src}
-							alt={asset.alt}
-							key={index}
-						/>
-					)
-				)}
 			</div>
+			<Rail
+				setCurrentIndex={setCurrentIndex}
+				currentIndex={currentIndex}
+			/>
 		</div>
 	);
 }
