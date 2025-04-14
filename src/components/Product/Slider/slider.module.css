@@ -51,6 +51,20 @@
 	color: transparent;
 }
 
+.voucher_container {
+	margin: 16px 0 0 16px;
+}
+
+.voucher_text {
+	display: inline;
+	padding: 2px 16px;
+	border-radius: 0.5rem;
+	background-color: var(--theme-color-primaryLight);
+	color: var(--theme-color-primaryHover);
+	font-weight: 700;
+	font-size: var(--theme-font-size-bodyS);
+}
+
 @media (min-width: 768px) {
 	.chevron_button:hover .chevron_left,
 	.chevron_button:hover .chevron_right {

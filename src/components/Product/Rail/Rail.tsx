@@ -53,6 +53,7 @@ export default function Rail({ setCurrentIndex, currentIndex }: Props) {
 		<div className={styles.rail_container}>
 			{railAssets.map((asset, index) => (
 				<button
+					aria-label={`See Slide ${index + 1}`}
 					ref={el => {
 						buttonRefs.current[index] = el;
 					}}

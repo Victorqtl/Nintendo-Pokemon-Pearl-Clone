@@ -29,10 +29,6 @@
 }
 
 @media (min-width: 425px) {
-	.top_bar_container {
-		font-size: var(--theme-font-size-bodyDesktop);
-	}
-
 	.top_bar_shipping {
 		display: flex;
 		justify-content: center;
@@ -43,13 +39,19 @@
 		padding-right: 1rem;
 	}
 
+	.top_bar_points {
+		color: var(--theme-color-primary);
+	}
+}
+
+@media (min-width: 458px) {
+	.top_bar_container {
+		font-size: var(--theme-font-size-bodyDesktop);
+	}
+
 	.top_bar_truck {
 		display: inline-block;
 		margin-right: 12px;
-		color: var(--theme-color-primary);
-	}
-
-	.top_bar_points {
 		color: var(--theme-color-primary);
 	}
 }

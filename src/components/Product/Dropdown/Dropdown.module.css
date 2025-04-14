@@ -1,0 +1,78 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+.label_container {
+	font-size: var(--theme-font-size-bodyMobile);
+	font-weight: 700;
+}
+
+.dropdown_relative {
+	position: relative;
+	min-height: 72px;
+}
+
+.dropdown_container {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding-inline: 1rem;
+	border: 1px solid var(--theme-color-lightGray2);
+	border-radius: 0.5rem;
+}
+
+.dropdown_open {
+	border: 2px solid var(--theme-color-darkGray2);
+}
+
+.dropdown_button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 50%;
+	background-color: var(--theme-color-primary);
+	color: white;
+}
+
+.chevron {
+	transition: transform 0.2s ease-in-out;
+}
+
+.rotate_chevron {
+	transform: rotate(180deg);
+}
+
+.version_container,
+.open_version_container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-block: 1rem;
+}
+
+.open_version_container:hover {
+	padding-inline: 1rem;
+	margin-inline: -1rem;
+	background-color: var(--theme-color-lightGray2);
+}
+
+.open_version_container:focus {
+	padding-inline: 1rem;
+	margin-inline: -1rem;
+	background-color: var(--theme-color-lightGray2);
+}
+
+.game_name {
+	font-size: var(--theme-font-size-bodyS);
+}
+
+.version_text,
+.version_price {
+	font-weight: 700;
+}

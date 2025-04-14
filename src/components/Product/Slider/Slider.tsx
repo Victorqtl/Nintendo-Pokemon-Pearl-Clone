@@ -44,22 +44,24 @@ export default function Slider() {
 	const prevSlide = () => {
 		setCurrentIndex(prevIndex => (prevIndex === 0 ? sliderAssets.length - 1 : prevIndex - 1));
 	};
-	console.log(currentIndex);
 	return (
 		<div className={styles.container}>
-			<div className={styles.slider_container}>
+			<div
+				className={styles.slider_container}
+				aria-label='Pokémon™ Shining Pearl gallery'
+				aria-roledescription='carousel'>
 				<div
 					className={styles.medias_container}
 					style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
 					{sliderAssets.map((asset, index) => (
 						<div
 							key={index}
-							className={styles.media_content}>
+							className={styles.media_content}
+							aria-label={`Slide ${index + 1}`}>
 							{asset.type === 'video' ? (
 								<video
 									src={asset.src}
-									controls
-									autoPlay></video>
+									controls></video>
 							) : (
 								<img
 									src={asset.src}
@@ -90,6 +92,9 @@ export default function Slider() {
 				setCurrentIndex={setCurrentIndex}
 				currentIndex={currentIndex}
 			/>
+			<div className={styles.voucher_container}>
+				<p className={styles.voucher_text}>Game Voucher eligible</p>
+			</div>
 		</div>
 	);
 }
