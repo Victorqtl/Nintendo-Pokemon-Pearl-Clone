@@ -70,4 +70,21 @@
 	.chevron_button:hover .chevron_right {
 		color: var(--theme-color-white);
 	}
+
+	.media_content {
+		border-radius: 1rem;
+	}
+
+	.media_content video,
+	.media_content img {
+		border-radius: 1rem;
+	}
+
+	.voucher_container {
+		margin: 16px 0 0 0;
+	}
+
+	.voucher_text {
+		font-size: var(--theme-font-size-bodyMobile);
+	}
 }

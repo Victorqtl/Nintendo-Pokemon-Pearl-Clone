@@ -1,14 +1,22 @@
 .product_section {
+	background-color: rgb(12, 9, 8);
+}
+
+.product_container {
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
+	max-width: 1240px;
+	background-color: white;
+	overflow-x: hidden;
+	box-shadow: rgba(60, 64, 89, 0.15) 0px 4px 16px 0px;
 }
 
 .list_container {
 	display: flex;
 	align-items: center;
 	gap: 8px;
-	padding: 16px 0 0px 16px;
+	padding: 1rem 0 0px 1rem;
 }
 
 .list_content {
@@ -27,6 +35,11 @@
 	font-weight: var(--theme-font-weight-bold);
 }
 
+.presentation_container {
+	display: flex;
+	flex-direction: column;
+}
+
 .esrb_container {
 	display: none;
 }
@@ -35,6 +48,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
+	margin-bottom: 24px;
 	padding: 0 1rem 1rem;
 }
 
@@ -61,4 +75,109 @@
 	justify-content: space-between;
 	font-size: var(--theme-font-size-h1LMobile);
 	font-weight: 700;
+}
+
+.heart_icon {
+	cursor: pointer;
+}
+
+.redeem_content {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	color: var(--theme-color-primary);
+}
+
+.redeem_content:hover,
+.redeem_content p:hover {
+	color: var(--theme-color-primaryHover);
+}
+
+.redeem_content p {
+	color: var(--theme-color-primary);
+	font-weight: 700;
+}
+
+.learn_more_content {
+	font-size: var(--theme-font-size-bodyS);
+}
+
+.learn_more_content a {
+	color: var(--theme-color-primary);
+	font-weight: 700;
+}
+
+.learn_more_content a:hover {
+	color: var(--theme-color-primaryHover);
+}
+
+@media (min-width: 768px) {
+	.product_container {
+		padding: 2rem 3rem;
+	}
+
+	.list_container {
+		padding: 0;
+	}
+
+	.presentation_container {
+		flex-direction: row;
+		align-items: start;
+		gap: 3rem;
+	}
+
+	.first_container {
+		width: 57%;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.esrb_container {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.esrb_container img {
+		object-fit: cover;
+		width: 44px;
+		height: 100%;
+	}
+
+	.esrb_text_container {
+		display: flex;
+		flex-direction: column;
+		font-size: var(--theme-font-size-bodyS);
+	}
+
+	.esrb_text_container div:nth-child(1) {
+		padding-bottom: 0.25rem;
+		border-bottom: 1px solid #484848;
+	}
+
+	.esrb_text_container div:nth-child(2) {
+		padding-top: 0.25rem;
+	}
+
+	.second_container {
+		padding: 0;
+		margin: 0;
+	}
+
+	.version_container {
+		font-size: var(--theme-font-size-bodyMobile);
+	}
+
+	.redeem_content {
+		margin-top: 1rem;
+	}
+}
+
+@media (min-width: 1240px) {
+	.product_container {
+		margin-inline: auto;
+		transform: translateY(2em);
+		border-radius: 0.75rem;
+	}
 }

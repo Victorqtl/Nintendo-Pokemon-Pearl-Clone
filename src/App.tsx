@@ -3,6 +3,7 @@ import Header from './components/layout/Header/Header';
 import Product from './components/Product/Product';
 import { Truck } from 'lucide-react';
 import { Coins } from 'lucide-react';
+import ModalSlider from './components/Product/Slider/ModalSlider';
 
 export default function App() {
 	return (
@@ -28,6 +29,7 @@ export default function App() {
 				</div>
 				<Product />
 			</main>
+			<ModalSlider />
 		</div>
 	);
 }

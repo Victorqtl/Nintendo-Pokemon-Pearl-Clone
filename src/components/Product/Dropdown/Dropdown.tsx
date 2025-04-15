@@ -39,7 +39,7 @@ export default function Dropdown() {
 					className={`${styles.dropdown_container} ${openDropdown ? styles.dropdown_open : ''}`}>
 					<div className={styles.dropdown_close_content}>
 						<div className={styles.version_container}>
-							<div>
+							<div className={styles.version_text_content}>
 								<p className={styles.version_text}>Digital</p>
 								<p className={styles.game_name}>Pokémon™ Shining Pearl</p>
 							</div>
@@ -68,7 +68,7 @@ export default function Dropdown() {
 							</div>
 							<div
 								tabIndex={0}
-								className={styles.open_version_container}
+								className={`${styles.open_version_container} ${styles.border_radius}`}
 								onMouseEnter={e => e.currentTarget.focus()}>
 								<div>
 									<p className={styles.version_text}>Physical - $59.99</p>

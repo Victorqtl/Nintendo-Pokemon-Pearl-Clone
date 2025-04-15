@@ -3,6 +3,7 @@
 	flex-direction: column;
 	justify-content: center;
 	gap: 0.5rem;
+	z-index: 10;
 }
 
 .label_container {
@@ -23,6 +24,8 @@
 	padding-inline: 1rem;
 	border: 1px solid var(--theme-color-lightGray2);
 	border-radius: 0.5rem;
+	background-color: #fff;
+	cursor: pointer;
 }
 
 .dropdown_open {
@@ -38,6 +41,7 @@
 	border-radius: 50%;
 	background-color: var(--theme-color-primary);
 	color: white;
+	cursor: pointer;
 }
 
 .chevron {
@@ -56,6 +60,20 @@
 	padding-block: 1rem;
 }
 
+.game_name {
+	font-size: var(--theme-font-size-bodyS);
+}
+
+.version_text,
+.version_price {
+	font-weight: 700;
+}
+
+.version_text_content {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
 .open_version_container:hover {
 	padding-inline: 1rem;
 	margin-inline: -1rem;
@@ -68,11 +86,7 @@
 	background-color: var(--theme-color-lightGray2);
 }
 
-.game_name {
-	font-size: var(--theme-font-size-bodyS);
-}
-
-.version_text,
-.version_price {
-	font-weight: 700;
+.border_radius {
+	border-bottom-left-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
 }

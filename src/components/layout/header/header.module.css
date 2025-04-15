@@ -141,6 +141,7 @@
 	}
 
 	.connect_button {
+		display: block;
 		border: 1px solid var(--theme-color-primary);
 		border-radius: 20px;
 		padding: 4px 14px;
@@ -149,6 +150,7 @@
 	}
 
 	.connect_button span {
+		font-size: var(--theme-font-size-bodyMobile);
 		color: var(--theme-color-primary);
 	}
 

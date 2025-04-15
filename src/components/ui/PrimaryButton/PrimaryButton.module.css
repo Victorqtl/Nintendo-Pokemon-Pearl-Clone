@@ -1,0 +1,52 @@
+.button_container {
+	overflow-x: hidden;
+}
+
+.button_content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	gap: 12px;
+	height: 64px;
+	background-color: var(--theme-color-primary);
+	border-radius: 0.375rem;
+	will-change: transform;
+	transition: box-shadow 0.2s;
+	cursor: pointer;
+}
+
+.button_container:hover {
+	animation: elastic-bounce 0.4s ease-in-out;
+	transform: scale(1.1, 1.07);
+}
+
+.button_content:hover {
+	background-color: var(--theme-color-primaryHover);
+	transition: all 0.2s ease-in-out;
+}
+
+@keyframes elastic-bounce {
+	0% {
+		transform: scale(1);
+	}
+	33% {
+		transform: scale(1.08, 1.07);
+	}
+	66% {
+		transform: scale(1.05, 1.04);
+	}
+	100% {
+		transform: scale(1.08, 1.07);
+	}
+}
+
+.download_icon {
+	color: white;
+}
+
+.button_container span {
+	color: white;
+	font-size: var(--theme-font-size-h1SMobile);
+	font-weight: 700;
+}
