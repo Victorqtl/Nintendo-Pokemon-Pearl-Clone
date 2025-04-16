@@ -18,7 +18,7 @@
 
 .button_container:hover {
 	animation: elastic-bounce 0.4s ease-in-out;
-	transform: scale(1.1, 1.07);
+	transform: scale(1.08, 1.07);
 }
 
 .button_content:hover {

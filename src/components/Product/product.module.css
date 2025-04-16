@@ -38,6 +38,7 @@
 .presentation_container {
 	display: flex;
 	flex-direction: column;
+	gap: 1rem;
 }
 
 .esrb_container {

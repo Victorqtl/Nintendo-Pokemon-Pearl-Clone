@@ -1,11 +1,18 @@
+.rail_wrapper {
+	position: relative;
+	width: 100%;
+	margin-top: 0.5rem;
+	padding-bottom: 8px;
+}
+
 .rail_container {
+	position: relative;
 	display: flex;
 	align-items: center;
 	gap: 8px;
 	width: 100%;
-	margin-top: 0.5rem;
-	padding-bottom: 8px;
 	overflow-x: auto;
+	scrollbar-width: none;
 }
 
 .rail_button {
@@ -50,7 +57,7 @@
 	padding: 4px;
 	border: 1px solid var(--theme-color-white);
 	border-radius: 50%;
-	background-color: var(--theme-color-darkGray2);
+	background-color: var(--theme-color-darkGray3);
 }
 
 .play_icon {
@@ -76,14 +83,103 @@
 	transition: opacity 0.2s ease-in-out;
 }
 
+.rail_previous_button {
+	position: absolute;
+	left: 0;
+	top: 1px;
+	z-index: 2;
+	display: block;
+}
+
+.rail_next_button {
+	position: absolute;
+	top: 1px;
+	right: 0;
+	z-index: 2;
+	display: block;
+}
+
+.rail_next_button,
+.rail_previous_button {
+	height: calc(100% - 10px);
+	padding: 0 0.5rem;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 0.75rem;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+}
+
+.rail_next_button:hover,
+.rail_previous_button:hover {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.rail_next_button:hover .rail_chevron,
+.rail_previous_button:hover .rail_chevron {
+	color: white;
+	transform: scale(1.15, 1.15);
+}
+
+.rail_chevron {
+	width: 40px;
+	height: 40px;
+	stroke-width: 2.5;
+	color: var(--theme-color-lightGray2);
+	transition: transform 0.2s ease-in-out;
+}
+
 @media (min-width: 768px) {
+	.rail_wrapper {
+		margin-top: 1rem;
+	}
 	.rail_container {
 		gap: 16px;
-		margin-top: 1rem;
+		overflow-x: hidden;
 	}
 
 	.rail_button {
 		min-width: clamp(50px, 8.5vw, 89px);
 		border-radius: 0.65rem;
+	}
+
+	.rail_next_button,
+	.rail_previous_button {
+		position: absolute;
+
+		display: block;
+		height: calc(100% - 10px);
+		padding: 0 0.5rem;
+		background-color: rgba(0, 0, 0, 0.3);
+		border-radius: 0.75rem;
+		cursor: pointer;
+		transition: background-color 0.2s ease-in-out;
+	}
+
+	.rail_next_button:hover,
+	.rail_previous_button:hover {
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+
+	.rail_next_button:hover .rail_chevron,
+	.rail_previous_button:hover .rail_chevron {
+		color: white;
+		transform: scale(1.15, 1.15);
+	}
+
+	.rail_next_button {
+		right: 0;
+	}
+
+	.rail_previous_button {
+		left: 0;
+		z-index: 2;
+	}
+
+	.rail_chevron {
+		width: 40px;
+		height: 40px;
+		stroke-width: 2.5;
+		color: var(--theme-color-lightGray2);
+		transition: transform 0.2s ease-in-out;
 	}
 }

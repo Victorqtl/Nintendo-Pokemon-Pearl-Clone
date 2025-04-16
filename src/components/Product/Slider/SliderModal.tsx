@@ -1,7 +1,8 @@
+import styles from './SliderModal.module.css';
+import { useEffect } from 'react';
+import Rail from '../Rail/Rail';
+import { useSliderModal } from '../../../hook/useSliderModal';
 import { ChevronRight, ChevronLeft, X } from 'lucide-react';
-import styles from './ModalSlider.module.css';
-// import Rail from '../Rail/Rail';
-import { useSliderModal } from '../../../context/slider-modal-context';
 
 import pokemonPearlFirstTrailer from '@/assets/videos/pokemon-pearl-first-trailer.mp4';
 import pokemonPearlSecondTrailer from '@/assets/videos/pokemon-pearl-second-trailer.mp4';
@@ -25,7 +26,7 @@ const sliderAssets = [
 	{ type: 'image', src: pokemonPearlLove, alt: 'Pokemon Shining Pearl, Pikachu and Hoothoot send love' },
 ];
 
-const ModalSlider = () => {
+export default function ModalSlider() {
 	const { isModalOpen, setIsModalOpen, currentIndex, setCurrentIndex } = useSliderModal();
 
 	const nextSlide = () => {
@@ -35,14 +36,31 @@ const ModalSlider = () => {
 		setCurrentIndex(currentIndex === 0 ? sliderAssets.length - 1 : currentIndex - 1);
 	};
 
+	useEffect(() => {
+		if (!isModalOpen) return;
+
+		const handleKeyDown = (e: KeyboardEvent) => {
+			if (e.key === 'Escape') {
+				setIsModalOpen(false);
+			}
+		};
+
+		window.addEventListener('keydown', handleKeyDown);
+		return () => window.removeEventListener('keydown', handleKeyDown);
+	}, [isModalOpen, setIsModalOpen]);
+
 	if (!isModalOpen) return null;
 
 	return (
-		<div className={styles.modal_container}>
-			<div className={styles.modal_content}>
+		<div
+			className={styles.modal_container}
+			onClick={() => setIsModalOpen(false)}>
+			<div
+				onClick={e => e.stopPropagation()}
+				className={styles.modal_content}>
 				<button
 					className={styles.modal_close_button}
-					aria-label='Fermer la galerie'
+					aria-label='Close gallery'
 					onClick={() => setIsModalOpen(false)}>
 					<X
 						size={40}
@@ -50,50 +68,50 @@ const ModalSlider = () => {
 					/>
 				</button>
 				<div
-					className={styles.modal_medias_container}
-					style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-					{sliderAssets.map((asset, index) => (
-						<div
-							key={index}
-							className={styles.modal_media_content}
-							aria-label={`Slide ${index + 1}`}>
-							{asset.type === 'video' ? (
-								<video
-									src={asset.src}
-									controls
-								/>
-							) : (
-								<img
-									src={asset.src}
-									alt={asset.alt}
-								/>
-							)}
-						</div>
-					))}
+					aria-label='Pokémon™ Shining Pearl gallery'
+					aria-roledescription='carousel'
+					className={styles.modal_medias_wrapper}>
+					<div className={styles.chevron_left_container}>
+						<button
+							onClick={prevSlide}
+							aria-label='Previous'
+							className={styles.chevron_button}>
+							<ChevronLeft className={styles.chevron_left} />
+						</button>
+					</div>
+					<div
+						className={styles.modal_medias_container}
+						style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+						{sliderAssets.map((asset, index) => (
+							<div
+								key={index}
+								className={styles.modal_media_content}
+								aria-label={`Slide ${index + 1}`}>
+								{asset.type === 'video' ? (
+									<video
+										src={asset.src}
+										controls
+									/>
+								) : (
+									<img
+										src={asset.src}
+										alt={asset.alt}
+									/>
+								)}
+							</div>
+						))}
+					</div>
+					<div className={styles.chevron_right_container}>
+						<button
+							onClick={nextSlide}
+							aria-label='Next'
+							className={styles.chevron_button}>
+							<ChevronRight className={styles.chevron_right} />
+						</button>
+					</div>
 				</div>
-				<div className={styles.chevron_left_container}>
-					<button
-						onClick={prevSlide}
-						aria-label='Précédent'
-						className={styles.chevron_button}>
-						<ChevronLeft className={styles.chevron_left} />
-					</button>
-				</div>
-				<div className={styles.chevron_right_container}>
-					<button
-						onClick={nextSlide}
-						aria-label='Suivant'
-						className={styles.chevron_button}>
-						<ChevronRight className={styles.chevron_right} />
-					</button>
-				</div>
-				{/* <Rail
-					setCurrentIndex={(index: number) => setCurrentIndex(index)}
-					currentIndex={currentIndex}
-				/> */}
+				<Rail />
 			</div>
 		</div>
 	);
-};
-
-export default ModalSlider;
+}
