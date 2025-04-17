@@ -84,6 +84,7 @@
 	}
 
 	.description_text {
+		padding-inline: 0;
 		flex-basis: 50%;
 	}
 	.description_image {

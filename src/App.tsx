@@ -3,6 +3,7 @@ import Header from './components/layout/Header/Header';
 import Product from './components/Product/Product';
 import SliderModal from './components/Product/Slider/SliderModal';
 import Description from './components/Description/Description';
+import About from './components/About/About';
 import { Truck } from 'lucide-react';
 import { Coins } from 'lucide-react';
 
@@ -30,6 +31,7 @@ export default function App() {
 				</div>
 				<Product />
 				<Description />
+				<About />
 			</main>
 			<SliderModal />
 		</div>
