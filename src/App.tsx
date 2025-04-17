@@ -1,9 +1,10 @@
 import styles from './styles/app.module.css';
 import Header from './components/layout/Header/Header';
 import Product from './components/Product/Product';
+import SliderModal from './components/Product/Slider/SliderModal';
+import Description from './components/Description/Description';
 import { Truck } from 'lucide-react';
 import { Coins } from 'lucide-react';
-import SliderModal from './components/Product/Slider/SliderModal';
 
 export default function App() {
 	return (
@@ -28,6 +29,7 @@ export default function App() {
 					</div>
 				</div>
 				<Product />
+				<Description />
 			</main>
 			<SliderModal />
 		</div>

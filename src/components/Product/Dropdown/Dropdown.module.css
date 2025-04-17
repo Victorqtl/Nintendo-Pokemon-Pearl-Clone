@@ -28,6 +28,14 @@
 	cursor: pointer;
 }
 
+.dropdown_close_content .version_text {
+	font-size: var(--theme-font-size-bodyDesktop);
+}
+
+.dropdown_close_content .game_name {
+	font-size: var(--theme-font-size-bodyS);
+}
+
 .dropdown_open {
 	border: 2px solid var(--theme-color-darkGray2);
 }
@@ -36,8 +44,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 2.5rem;
-	height: 2.5rem;
+	width: 1.875rem;
+	height: 1.875rem;
 	border-radius: 50%;
 	background-color: var(--theme-color-primary);
 	color: white;
@@ -89,4 +97,11 @@
 .border_radius {
 	border-bottom-left-radius: 0.5rem;
 	border-bottom-right-radius: 0.5rem;
+}
+
+@media (min-width: 430px) {
+	.dropdown_button {
+		width: 2.5rem;
+		height: 2.5rem;
+	}
 }

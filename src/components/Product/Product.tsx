@@ -2,7 +2,7 @@ import styles from './Product.module.css';
 import Slider from './Slider/Slider';
 import Dropdown from './Dropdown/Dropdown';
 import PrimaryButton from '../ui/PrimaryButton/PrimaryButton';
-import { ChevronRight, Heart, Tags } from 'lucide-react';
+import { ChevronRight, Heart, Tags, Download } from 'lucide-react';
 import ESRB from '/ESRB-logo.png';
 
 export default function Product() {
@@ -67,7 +67,16 @@ export default function Product() {
 								className={styles.heart_icon}
 							/>
 						</div>
-						<PrimaryButton />
+						<PrimaryButton
+							text={'Direct download'}
+							icon={
+								<Download
+									color='white'
+									strokeWidth={2.5}
+								/>
+							}
+							size='xl'
+						/>
 						<a
 							href='/'
 							className={styles.redeem_content}>

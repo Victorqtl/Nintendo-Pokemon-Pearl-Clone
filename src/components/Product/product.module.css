@@ -78,6 +78,10 @@
 	font-weight: 700;
 }
 
+.price span {
+	font-size: var(--theme-font-size-h1SMobile);
+}
+
 .heart_icon {
 	cursor: pointer;
 }
@@ -110,6 +114,12 @@
 
 .learn_more_content a:hover {
 	color: var(--theme-color-primaryHover);
+}
+
+@media (min-width: 430px) {
+	.price span {
+		font-size: var(--theme-font-size-h1LMobile);
+	}
 }
 
 @media (min-width: 768px) {

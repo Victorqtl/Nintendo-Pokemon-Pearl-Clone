@@ -3,17 +3,25 @@
 }
 
 .button_content {
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	width: 100%;
-	gap: 12px;
-	height: 64px;
 	background-color: var(--theme-color-primary);
 	border-radius: 0.375rem;
 	will-change: transform;
 	transition: box-shadow 0.2s;
 	cursor: pointer;
+}
+
+.button_content_xl {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	height: 56px;
+}
+
+.button_content_md {
+	height: 48px;
+	width: 100%;
 }
 
 .button_container:hover {
@@ -23,7 +31,7 @@
 
 .button_content:hover {
 	background-color: var(--theme-color-primaryHover);
-	transition: all 0.2s ease-in-out;
+	transition: background-color 0.2s ease-in-out;
 }
 
 @keyframes elastic-bounce {
@@ -41,12 +49,25 @@
 	}
 }
 
-.download_icon {
+.button_content span {
 	color: white;
+	font-weight: 700;
 }
 
-.button_container span {
-	color: white;
+.button_content_xl span {
 	font-size: var(--theme-font-size-h1SMobile);
-	font-weight: 700;
+}
+
+.button_content_md span {
+	font-size: var(--theme-font-size-h2Mobile);
+}
+
+@media (min-width: 430px) {
+	.button_content_xl {
+		height: 64px;
+	}
+
+	.button_container_md {
+		max-width: 342px;
+	}
 }

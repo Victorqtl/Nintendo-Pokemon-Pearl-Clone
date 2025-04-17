@@ -1,15 +1,26 @@
 import styles from './PrimaryButton.module.css';
-import { Download } from 'lucide-react';
+import { ReactNode } from 'react';
 
-export default function PrimaryButton() {
+type Props = {
+	text: string;
+	icon?: ReactNode;
+	size: string;
+};
+
+export default function PrimaryButton({ text, icon, size }: Props) {
 	return (
-		<div className={styles.button_container}>
-			<button className={styles.button_content}>
-				<Download
-					strokeWidth={2.5}
-					className={styles.download_icon}
-				/>
-				<span>Direct download</span>
+		<div
+			className={
+				size === 'md' ? `${styles.button_container} ${styles.button_container_md}` : styles.button_container
+			}>
+			<button
+				className={
+					size === 'xl'
+						? `${styles.button_content} ${styles.button_content_xl}`
+						: `${styles.button_content} ${styles.button_content_md}`
+				}>
+				{icon && icon}
+				<span>{text}</span>
 			</button>
 		</div>
 	);
