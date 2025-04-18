@@ -4,6 +4,7 @@ import Product from './components/Product/Product';
 import SliderModal from './components/Product/Slider/SliderModal';
 import Description from './components/Description/Description';
 import About from './components/About/About';
+import More from './components/More/More';
 import { Truck } from 'lucide-react';
 import { Coins } from 'lucide-react';
 
@@ -32,6 +33,7 @@ export default function App() {
 				<Product />
 				<Description />
 				<About />
+				<More />
 			</main>
 			<SliderModal />
 		</div>
