@@ -1,4 +1,4 @@
-import styles from './styles/app.module.css';
+import styles from './styles/App.module.css';
 import Header from './components/layout/Header/Header';
 import Product from './components/Product/Product';
 import SliderModal from './components/Product/Slider/SliderModal';

@@ -1,4 +1,4 @@
-import styles from './slider.module.css';
+import styles from './Slider.module.css';
 import Rail from '../Rail/Rail';
 import { useSliderModal } from '../../../hook/useSliderModal';
 import { ChevronRight, ChevronLeft, Play } from 'lucide-react';

@@ -1,4 +1,4 @@
-import styles from './header.module.css';
+import styles from './Header.module.css';
 import NintendoLogo from '/nintendo-logo.png';
 import NintendoStoreLogo from '/nintendo-store-logo.png';
 import { Compass, Briefcase, ShieldQuestion, Search, Heart, ShoppingCart } from 'lucide-react';
