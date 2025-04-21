@@ -17,25 +17,33 @@ export default function Footer() {
 						/>
 					</div>
 					<div className={styles.social_media_content}>
-						<a href='/'>
+						<a
+							aria-label='Nintendo on Facebook'
+							href='/'>
 							<Facebook
 								size={35}
 								strokeWidth={0}
 							/>
 						</a>
-						<a href='/'>
+						<a
+							aria-label='Nintendo on Instagram'
+							href='/'>
 							<Instagram
 								size={35}
 								color='white'
 							/>
 						</a>
-						<a href='/'>
+						<a
+							aria-label='Nintendo on Twitter'
+							href='/'>
 							<Twitter
 								size={35}
 								color='white'
 							/>
 						</a>
-						<a href='/'>
+						<a
+							aria-label='Nintendo on Youtube'
+							href='/'>
 							<Youtube
 								size={35}
 								color='white'
