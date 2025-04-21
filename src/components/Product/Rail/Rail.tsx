@@ -58,9 +58,7 @@ export default function Rail() {
 	};
 
 	const scrollToEnd = () => {
-		const el = railRef.current;
-		if (!el) return;
-		el.scrollTo({ left: el.scrollWidth, behavior: 'smooth' });
+		railRef.current?.scrollTo({ left: railRef.current.scrollWidth, behavior: 'smooth' });
 	};
 
 	const handleButtonClick = (index: number) => {

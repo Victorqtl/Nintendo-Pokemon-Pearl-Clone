@@ -1,0 +1,28 @@
+.warning_container {
+	padding: 2rem 0;
+}
+
+.warning_content {
+	max-width: 71.5rem;
+	margin-inline: 1rem;
+}
+
+.warning_content p {
+	margin-block: 0.625rem;
+	font-size: 0.625rem;
+}
+
+@media (min-width: 768px) {
+	.warning_container {
+		padding: 3rem 0;
+	}
+
+	.warning_content {
+		width: 96%;
+		margin-inline: auto;
+	}
+
+	.warning_content p {
+		font-size: var(--theme-font-size-bodyS);
+	}
+}

@@ -1,3 +1,8 @@
+.container main {
+	display: block;
+	padding-bottom: 3rem;
+}
+
 .top_bar_container {
 	min-height: 48px;
 	display: flex;

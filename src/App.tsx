@@ -5,6 +5,9 @@ import SliderModal from './components/Product/Slider/SliderModal';
 import Description from './components/Description/Description';
 import About from './components/About/About';
 import More from './components/More/More';
+import Warning from './components/Warning/Warning';
+import Footer from './components/layout/Footer/Footer';
+import MobileNav from './components/layout/MobileNav/MobileNav';
 import { Truck } from 'lucide-react';
 import { Coins } from 'lucide-react';
 
@@ -34,8 +37,11 @@ export default function App() {
 				<Description />
 				<About />
 				<More />
+				<Warning />
 			</main>
+			<Footer />
 			<SliderModal />
+			<MobileNav />
 		</div>
 	);
 }

@@ -1,0 +1,68 @@
+.mobile_nav_container {
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	display: block;
+	z-index: 1000;
+	width: 100%;
+	height: calc(58px + 1rem);
+	background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+}
+
+.mobile_nav_wrapper {
+	margin: auto;
+	height: 58px;
+	width: 96%;
+	max-width: 440px;
+}
+
+.mobile_nav_content {
+	position: relative;
+	height: 58px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-inline: 1rem;
+	background-color: #ffffff;
+	border-radius: 100px;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 0.25rem 0.5rem 0px;
+}
+
+.side_buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1 1 auto;
+}
+
+.mobile_nav_content svg {
+	width: 30px;
+	height: 30px;
+	color: var(--theme-color-darkGray2);
+	fill: var(--theme-color-darkGray2);
+}
+
+.main_button {
+	width: 60px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: -1rem;
+	background-color: var(--theme-color-primary);
+	border-radius: 50%;
+}
+
+.main_button svg {
+	width: 36px;
+	height: 36px;
+	color: white;
+	fill: transparent;
+}
+
+@media (min-width: 1025px) {
+	.mobile_nav_container {
+		display: none;
+	}
+}

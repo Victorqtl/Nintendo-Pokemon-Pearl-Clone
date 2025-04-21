@@ -3,7 +3,8 @@
 }
 
 .about_content {
-	padding-inline: 1rem;
+	padding: 0 1rem;
+	margin-inline: 1rem;
 	max-width: 71.5rem;
 }
 
@@ -140,6 +141,7 @@
 	}
 
 	.about_content {
+		width: 96%;
 		margin-inline: auto;
 	}
 
@@ -152,11 +154,5 @@
 @media (min-width: 1024px) {
 	.tags_list {
 		gap: 1rem;
-	}
-}
-
-@media (min-width: 1168px) {
-	.about_content {
-		padding-inline: 0;
 	}
 }

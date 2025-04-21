@@ -79,6 +79,7 @@
 
 	.description_content {
 		flex-direction: row;
+		width: 96%;
 		margin-inline: auto;
 	}
 

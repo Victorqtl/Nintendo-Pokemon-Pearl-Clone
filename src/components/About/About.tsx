@@ -110,8 +110,11 @@ export default function About() {
 				<div className={styles.tags_container}>
 					<h2>Related tags</h2>
 					<div className={styles.tags_list}>
-						{tags.map(tag => (
-							<Tag text={`${tag.name}`} />
+						{tags.map((tag, index) => (
+							<Tag
+								key={index}
+								text={`${tag.name}`}
+							/>
 						))}
 					</div>
 				</div>
@@ -130,8 +133,8 @@ export default function About() {
 									<div className={styles.details_description}>
 										{item.link && (
 											<div className={styles.details_link}>
-												{item.link.map((desc, i) => (
-													<a key={i}>{desc}</a>
+												{item.link.map((desc, index) => (
+													<a key={index}>{desc}</a>
 												))}
 											</div>
 										)}

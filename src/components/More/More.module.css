@@ -15,6 +15,15 @@
 	font-size: var(--theme-font-size-h1SMobile);
 }
 
+.rail_wrapper {
+	position: relative;
+}
+
+.rail_previous_button,
+.rail_next_button {
+	display: none;
+}
+
 .rail_container {
 	width: 100%;
 	overflow-x: hidden;
@@ -24,6 +33,7 @@
 
 .rail_content {
 	display: flex;
+	align-items: center;
 	justify-content: left;
 }
 
@@ -105,7 +115,7 @@
 	line-height: 19px;
 }
 
-.card_demo_active {
+.card_demo.active {
 	padding-inline: 0.5rem;
 	width: fit-content;
 	border-radius: 0.5rem;
@@ -175,6 +185,9 @@
 }
 
 @media (min-width: 430px) {
+	.card_content {
+		margin: 1.5rem 1rem;
+	}
 	.card_details h3,
 	.card_price {
 		font-size: var(--theme-font-size-bodyDesktop);
@@ -184,5 +197,66 @@
 	.card_demo p,
 	.card_type p {
 		font-size: var(--theme-font-size-bodyS);
+	}
+}
+
+@media (min-width: 768px) {
+	.more_container {
+		padding-top: 3rem;
+	}
+
+	.more_content {
+		max-width: 71.5rem;
+		width: 96%;
+		margin-inline: auto;
+	}
+
+	.more_content h2 {
+		font-size: var(--theme-font-size-h1SDesktop);
+	}
+
+	.rail_previous_button {
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 2;
+		display: block;
+	}
+
+	.rail_next_button {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 2;
+		display: block;
+	}
+
+	.rail_next_button,
+	.rail_previous_button {
+		height: calc(100%);
+
+		background-color: rgba(0, 0, 0, 0.3);
+		border-radius: 0.5rem;
+		cursor: pointer;
+		transition: background-color 0.2s ease-in-out;
+	}
+
+	.rail_next_button:hover,
+	.rail_previous_button:hover {
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+
+	.rail_next_button:hover .rail_chevron,
+	.rail_previous_button:hover .rail_chevron {
+		color: white;
+		transform: scale(1.15, 1.15);
+	}
+
+	.rail_chevron {
+		width: 64px;
+		height: 64px;
+		stroke-width: 2.5;
+		color: var(--theme-color-lightGray2);
+		transition: transform 0.2s ease-in-out;
 	}
 }

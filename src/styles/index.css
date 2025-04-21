@@ -75,6 +75,10 @@ select {
 	font: inherit;
 }
 
+li {
+	list-style-type: none;
+}
+
 p,
 span,
 h1,

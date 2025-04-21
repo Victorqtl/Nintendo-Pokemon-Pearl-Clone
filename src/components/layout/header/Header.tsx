@@ -1,13 +1,7 @@
 import styles from './header.module.css';
 import NintendoLogo from '/nintendo-logo.png';
 import NintendoStoreLogo from '/nintendo-store-logo.png';
-import UsaFlag from '/usa-flag.png';
-import { Compass } from 'lucide-react';
-import { Briefcase } from 'lucide-react';
-import { ShieldQuestion } from 'lucide-react';
-import { Search } from 'lucide-react';
-import { Heart } from 'lucide-react';
-import { ShoppingCart } from 'lucide-react';
+import { Compass, Briefcase, ShieldQuestion, Search, Heart, ShoppingCart } from 'lucide-react';
 
 export default function Header() {
 	return (
@@ -115,8 +109,8 @@ export default function Header() {
 						aria-label='Change region'
 						className={styles.region_selector}>
 						<img
-							src={UsaFlag}
-							alt='USA flag'
+							src='https://assets.nintendo.com/image/upload/c_scale,w_24,q_auto/ncom/global/flags-change-region/FlagUsaIconRegionSelect.png'
+							alt='Flag of Usa'
 							className={styles.flag}
 						/>
 					</button>
