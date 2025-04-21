@@ -1,5 +1,5 @@
 import styles from './styles/app.module.css';
-import Header from './components/layout/Header/Header';
+import Header from '@/components/layout/Header/Header';
 import Product from './components/Product/Product';
 import SliderModal from './components/Product/Slider/SliderModal';
 import Description from './components/Description/Description';
