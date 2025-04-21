@@ -1,4 +1,4 @@
-import styles from './rail.module.css';
+import styles from './Rail.module.css';
 import { useSliderModal } from '../../../hook/useSliderModal';
 import pokemonPearlDialgaAndPalkia from '@/assets/images/pokemon-pearl-dialga&palkia.jpeg';
 import pokemonPearlDialgaVsPalkia from '@/assets/images/pokemon-pearl-diagavspalkia.jpeg';
